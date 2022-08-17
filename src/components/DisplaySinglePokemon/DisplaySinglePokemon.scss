@@ -1,0 +1,225 @@
+$stats: (
+  hp: rgb(52, 195, 88),
+  attack:rgb(212, 51, 51),
+  defense:rgb(64, 61, 219),
+  special-attack:rgb(200, 101, 30),
+  special-defense:rgb(46, 139, 227),
+  speed:rgb(234, 185, 8),
+);
+
+.pokemon-details-container {
+  margin-top: 50px;
+  max-width: 1024px;
+
+  .abilites,
+  .detailed-info {
+    text-transform: capitalize;
+  }
+
+  .card-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+
+    .previous-pokemon,
+    .pokemon-name,
+    .next-pokemon {
+      width: 33%;
+    }
+
+
+    .previous-pokemon,
+    .next-pokemon {
+      p {
+        margin: 0;
+        text-transform: capitalize;
+        color: black;
+
+        &:hover {
+          color: grey;
+        }
+      }
+    }
+
+    .previous-pokemon {
+      span {
+        margin-left: 8px;
+      }
+    }
+
+    .next-pokemon {
+      span {
+        margin-right: 8px;
+      }
+    }
+  }
+
+  .abilites {
+    p {
+      margin: 5px 0;
+    }
+
+    .hidden-ability {
+      margin-top: 5px;
+
+      .hidden-ability-heading {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .detailed-info {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: auto;
+
+    div {
+      text-align: left;
+    }
+
+    .poke-stats {
+      width: 160px;
+
+      p {
+        margin: 6px 0;
+      }
+
+      progress {
+        border-radius: 10px;
+        border: none;
+        background-color: rgb(212, 212, 212);
+      }
+
+      @each $name,
+      $color in $stats {
+        .stat-#{$name}::-moz-progress-bar {
+          background-color: $color;
+          border-radius: 10px;
+        }
+
+        .stat-#{$name}::-moz-progress-value {
+          background-color: $color;
+          border-radius: 10px;
+        }
+
+        .stat-#{$name}::-webkit-progress-bar {
+          background-color: $color;
+          border-radius: 10px;
+        }
+
+        .stat-#{$name}::-webkit-progress-value {
+          background-color: $color;
+          border-radius: 10px;
+        }
+      }
+    }
+
+    .poke-moves {
+      width: 250px;
+
+      h3 {
+        margin: 10px 0;
+      }
+
+      #search-move-label {
+        display: block;
+      }
+
+      .moves-list {
+        height: 500px;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar-track-piece,
+        &::-webkit-scrollbar,
+        &::-webkit-scrollbar-thumb {
+          background: black;
+        }
+
+        li {
+          display: flex;
+          align-items: center;
+          height: 160px;
+          padding: 3px 0;
+
+          .move-details {
+            width: 180px;
+          }
+
+          .move-image-container {
+            display: flex;
+            align-items: center;
+            height: 100%;
+
+            img {
+              width: 40px;
+              height: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/*
+      .stat-hp::-moz-progress-bar{
+        background-color: rgb(52, 195, 88);
+      }
+      .stat-hp::-moz-progress-value{
+        background-color: rgb(52, 195, 88);
+      }/*
+      .stat-attack::-moz-progress-bar{
+        background-color: rgb(212, 51, 51);
+      }
+      .stat-attack::-moz-progress-value{
+        background-color: rgb(212, 51, 51);
+      }
+      .stat-defense::-moz-progress-bar{
+        background-color: rgb(64, 61, 219);
+      }
+      .stat-defense::-moz-progress-value{
+        background-color: rgb(64, 61, 219);
+      }
+      .stat-special-attack::-moz-progress-bar{
+        background-color: rgb(200, 101, 30);
+      }
+      .stat-special-attack::-moz-progress-value{
+        background-color: rgb(200, 101, 30);
+      }
+      .stat-special-defense::-moz-progress-bar{
+        background-color: rgb(46, 139, 227);
+      }
+      .stat-special-defense::-moz-progress-value{
+        background-color: rgb(46, 139, 227);
+      }
+      .stat-speed::-moz-progress-bar{
+        background-color: rgb(234, 185, 8);
+      }
+      .stat-speed::-moz-progress-value{
+        background-color: rgb(234, 185, 8);
+      } */
+/*      progress::-webkit-progress-bar {
+        background-color: rgb(0, 89, 255);
+        border-radius: 10px;
+      } 
+      progress::-moz-progress-bar {
+        background-color: coral;
+        border-radius: 10px;
+      }
+       progress::-webkit-progress-value {
+        background-color: blue;
+        border-radius: 10px;
+        box-shadow: 1px 1px 5px 3px rgba( 255, 0, 0, 0.8 );
+      } 
+      progress::-moz-progress-value {
+        background-color: coral;
+        border-radius: 10px;
+        box-shadow: 1px 1px 5px 3px rgba( 255, 0, 0, 0.8 );
+      } */

@@ -1,0 +1,26 @@
+body {
+  background-color: rgb(247, 148, 111);
+  color: white;
+  margin: 0;
+  font-family: rubik;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  grid-template-rows: 150px 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+
+  grid-template-areas:
+    '. main'
+    'nav main';
+
+  max-width: 1450px;
+  padding: 40px 40px 40px 0px;
+  margin: 0 auto;
+}
+
+#content {
+  grid-area: main;
+}

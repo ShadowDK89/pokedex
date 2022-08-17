@@ -1,0 +1,45 @@
+#nav-links {
+  display: grid;
+  grid-area: nav;
+  height: 150px;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: auto;
+
+    #show-all {
+      order: 1;
+    }
+
+    li {
+      margin-bottom: 10px;
+
+      a {
+
+        button {
+          font-size: 1rem;
+          font-weight: bold;
+          background: #f4f4f4;
+          border: 2px solid #7f7f7f;
+          border-radius: 5px;
+          padding: 8px 15px;
+
+          &:hover {
+            background-color: #b0b0b0;
+            border: 2px solid #000000;
+            cursor: pointer;
+          }
+        }
+
+        &:visited {
+          background-color: yellow;
+          color: black;
+        }
+      }
+    }
+  }
+
+}

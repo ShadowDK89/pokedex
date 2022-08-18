@@ -1,4 +1,4 @@
-import { configureStore, createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
 import { pokemonSlice } from "./reducers/pokeminListReducer";
 
 const store = configureStore({
@@ -26,3 +26,7 @@ export const selectPokeMovesDetails = (state: RootState) =>
   state.pokemonList.pokemonMovesDetails;
 export const selectCurrentGen = (state: RootState) =>
   state.pokemonList.currentGen;
+export const selectCurrentSearch = (state: RootState) =>
+  state.pokemonList.searchPokemon;
+export const selectCurrentSort = (state: RootState) =>
+  state.pokemonList.sortPokemon;

@@ -8,13 +8,6 @@ export type TPokemon = {
   moves: TPokeMoves[];
 };
 
-/* export type TPokemonList = {
-  id: string;
-  name: string;
-  types: TPokeType[];
-  sprites: TPokeSprites;
-}; */
-
 export type TPokeStats = {
   base_stat: number;
   effort: number;

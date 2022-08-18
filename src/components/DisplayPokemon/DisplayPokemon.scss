@@ -1,98 +1,52 @@
-h1 {
-	text-transform: uppercase;
-	text-align: center;
-	font-size: 54px;
-}
-
-.pokemon-list-actions {
-	display: flex;
-	justify-content: flex-end;
-	width: 50%;
-	margin-left: auto;
-
-	label {
-		margin-right: .5rem;
-	}
-
-	input {
-		margin-right: auto;
-	}
-
-	#sort-by {
-		width: 90px;
-	}
-}
-
 #pokemon-container {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 	grid-gap: 20px;
 	padding-inline-start: 0;
-}
 
-a {
-	text-decoration: none;
-}
+	a {
+		text-decoration: none;
 
-.card {
-	list-style: none;
-	padding: 30px;
-	background-color: #f4f4f4;
-	color: #222;
-	text-align: center;
-	border: 2px solid rgb(127, 127, 127);
-	border-radius: 10px;
-}
+		.card {
+			list-style: none;
+			padding: 30px;
+			background-color: #f4f4f4;
+			color: #222;
+			text-align: center;
+			border: 2px solid rgb(127, 127, 127);
+			border-radius: 10px;
+		}
 
-.card:hover:not(.pokemon-details-container) {
-	animation: bounce 0.3s forwards;
-}
-
-.card-title {
-	text-transform: capitalize;
-	margin-bottom: 0px;
-	font-size: 32px;
-	font-weight: normal;
-}
-
-.card-subtitle {
-	text-transform: capitalize;
-	margin-top: 5px;
-	color: #666;
-	font-weight: lighter;
-}
-
-.card-image {
-	height: 180px;
-}
-
-@keyframes bounce {
-	from {
-		transform: scale(1);
-	}
-
-	to {
-		transform: scale(1.05);
-	}
-}
-
-/* TODO: Fix responsiveness */
-/* @media screen and (max-width: 576px) {
-	#pokemon-container {
-		max-width: 250px;
-		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-		margin: auto;
-
-		.card-image {
-			height: 150px;
+		.card:hover:not(.pokemon-details-container) {
+			animation: bounce 0.3s forwards;
 		}
 
 		.card-title {
-			font-size: 24px;
+			text-transform: capitalize;
+			margin-bottom: 0px;
+			font-size: 32px;
+			font-weight: normal;
 		}
 
 		.card-subtitle {
-			font-size: 14px;
+			text-transform: capitalize;
+			margin-top: 5px;
+			color: #666;
+			font-weight: lighter;
+		}
+
+		.card-image {
+			height: 180px;
+		}
+
+		@keyframes bounce {
+			from {
+				transform: scale(1);
+			}
+
+			to {
+				transform: scale(1.05);
+			}
 		}
 	}
-} */
+}

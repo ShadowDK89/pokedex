@@ -1,0 +1,46 @@
+header {
+
+  h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 54px;
+    color: rgb(54, 54, 54);
+  }
+
+  .pokemon-list-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+
+    label {
+      margin-left: auto;
+      color: rgb(54, 54, 54);
+    }
+
+    label,
+    input {
+      margin-right: .5rem;
+    }
+
+    #sort-by {
+      width: 90px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .pokemon-list-actions {
+      flex-direction: column;
+      align-items: flex-end;
+
+      input,
+      select {
+        margin-top: .5rem;
+        margin-right: 0;
+      }
+
+      label {
+        margin-right: 0;
+      }
+    }
+  }
+}

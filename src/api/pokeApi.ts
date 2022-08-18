@@ -28,7 +28,6 @@ export async function fetchPokemon(start: number, end: number) {
     const promises: TPokemon[] = [];
     for (start; start <= end; start++) {
       let result = await axios.get<TPokemon>(`${url}pokemon/${start}`);
-      //let img = result.data.sprites as unknown
       pokemon = {
         name: result.data.name,
         id: result.data.id,
@@ -59,7 +58,7 @@ export async function fetchPokemon(start: number, end: number) {
     }
     return promises;
   } catch (error) {
-    console.log(error);
+    //Error has occured
   }
 }
 

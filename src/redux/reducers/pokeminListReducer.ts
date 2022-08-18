@@ -5,7 +5,6 @@ import {
   TPokeMovesDetails,
   TPokeSprites,
 } from "../../model/pokemon";
-import type { RootState } from "../store";
 
 type PokemonSliceState = {
   pokemonList: TPokemon[];
@@ -14,6 +13,8 @@ type PokemonSliceState = {
   nextPokemon: TPokemon;
   pokemonMovesDetails: TPokeMovesDetails[];
   currentGen: number;
+  searchPokemon: TPokemon[];
+  sortPokemon: TPokemon[];
 };
 
 const defaultSprites: TPokeSprites = {
@@ -41,6 +42,8 @@ const initialState: PokemonSliceState = {
   nextPokemon: defaultPokemon,
   pokemonMovesDetails: defaultMovesDetails,
   currentGen: 1,
+  searchPokemon: [],
+  sortPokemon: [],
 };
 
 export const pokemonSlice = createSlice({
@@ -70,6 +73,12 @@ export const pokemonSlice = createSlice({
     currentGeneration: (state, action: PayloadAction<number>) => {
       state.currentGen = action.payload;
     },
+    updateSearch: (state, action: PayloadAction<TPokemon[]>) => {
+      state.searchPokemon = [...action.payload];
+    },
+    updateSort: (state, action: PayloadAction<TPokemon[]>) => {
+      state.sortPokemon = [...action.payload];
+    },
   },
 });
 
@@ -80,4 +89,6 @@ export const {
   updateNextPokemon,
   updatePokeMovesDetails,
   currentGeneration,
+  updateSearch,
+  updateSort,
 } = pokemonSlice.actions;

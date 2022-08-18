@@ -7,7 +7,6 @@ import { getMoveDetails, getSinglePokemon } from "../../api/pokeApi";
 import { TPokemon, TPokeMovesDetails, TPokeType } from "../../model/pokemon";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
 import {
-  selectPokemonList,
   selectPokeMovesDetails,
   selectPreviousPokemon,
   selectNextPokemon,

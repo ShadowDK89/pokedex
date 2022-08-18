@@ -146,6 +146,9 @@ function DisplaySinglePokemon() {
             data-id={pokeman.id}
             key={pokeman.id}
           >
+            <div id="back-btn">
+              <Link to="/">Back</Link>
+            </div>
             <img
               className="card-image"
               src={pokeman.sprites.front_default}
@@ -264,7 +267,6 @@ function DisplaySinglePokemon() {
 
   return (
     <React.Fragment>
-      <Link to="/">Back</Link>
       <div id="pokemon-details">{renderPokemon(pokemonSelector)}</div>
     </React.Fragment>
   );

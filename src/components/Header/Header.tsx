@@ -7,6 +7,7 @@ import {
   updateSort,
 } from "../../redux/reducers/pokeminListReducer";
 import "./Header.scss";
+import { Link } from "react-router-dom";
 
 function Header() {
   const pokemonListSelector = useAppSelector(selectPokemonList);
@@ -52,7 +53,9 @@ function Header() {
 
   return (
     <header>
-      <h1>Daniels Pokédex</h1>
+      <Link to="/">
+        <h1>Daniels Pokédex</h1>
+      </Link>
       <div className="pokemon-list-actions">
         <label htmlFor="search-pokemon">Search for Pokémon</label>
         <input

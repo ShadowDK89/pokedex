@@ -8,8 +8,11 @@ $stats: (
 );
 
 .pokemon-details-container {
-  margin-top: 50px;
-  max-width: 1024px;
+  margin-top: 20px;
+
+  #back-btn {
+    float: left;
+  }
 
   .abilites,
   .detailed-info {
